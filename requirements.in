@@ -1,0 +1,5 @@
+aws-cdk-lib==2.82.0
+constructs
+pandas
+pyarrow
+s3fs
