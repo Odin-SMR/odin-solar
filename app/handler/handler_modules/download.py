@@ -1,7 +1,7 @@
 import pandas as pd  # type: ignore
 import s3fs  # type: ignore
 
-from config import BUCKET, CUTOFF_DATE, FILENAME, URL
+from .config import BUCKET, CUTOFF_DATE, FILENAME, URL
 
 
 def download():
@@ -9,9 +9,7 @@ def download():
     df_new.columns = df_new.columns.str.replace("F10.7_", "")
     df_new["DATE"] = pd.to_datetime(df_new["DATE"])
     df_new.set_index(["DATE"], inplace=True)
-    df_new = df_new[
-        (df_new.index > CUTOFF_DATE) & (df_new["DATA_TYPE"] == "OBS")
-    ]
+    df_new = df_new[(df_new.index > CUTOFF_DATE) & (df_new["DATA_TYPE"] == "OBS")]
     s3 = s3fs.S3FileSystem()
 
     df_existing = pd.DataFrame()

@@ -1,4 +1,4 @@
-from download import download
+from .download import download
 
 
 def handler(event, context):
