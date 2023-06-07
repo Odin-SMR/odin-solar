@@ -4,21 +4,8 @@
 #
 #    pip-compile --resolver=backtracking requirements.in
 #
-aiobotocore==2.5.0
-    # via s3fs
-aiohttp==3.8.4
-    # via
-    #   aiobotocore
-    #   s3fs
-aioitertools==0.11.0
-    # via aiobotocore
-aiosignal==1.3.1
-    # via aiohttp
-async-timeout==4.0.2
-    # via aiohttp
 attrs==23.1.0
     # via
-    #   aiohttp
     #   cattrs
     #   jsii
 aws-cdk-asset-awscli-v1==2.2.185
@@ -29,30 +16,14 @@ aws-cdk-asset-node-proxy-agent-v5==2.0.155
     # via aws-cdk-lib
 aws-cdk-lib==2.82.0
     # via -r requirements.in
-botocore==1.29.76
-    # via aiobotocore
 cattrs==22.2.0
     # via jsii
-charset-normalizer==3.1.0
-    # via aiohttp
 constructs==10.2.40
-    # via
-    #   -r requirements.in
-    #   aws-cdk-lib
+    # via aws-cdk-lib
 exceptiongroup==1.1.1
     # via cattrs
-frozenlist==1.3.3
-    # via
-    #   aiohttp
-    #   aiosignal
-fsspec==2023.5.0
-    # via s3fs
-idna==3.4
-    # via yarl
 importlib-resources==5.12.0
     # via jsii
-jmespath==1.0.1
-    # via botocore
 jsii==1.82.0
     # via
     #   aws-cdk-asset-awscli-v1
@@ -60,16 +31,6 @@ jsii==1.82.0
     #   aws-cdk-asset-node-proxy-agent-v5
     #   aws-cdk-lib
     #   constructs
-multidict==6.0.4
-    # via
-    #   aiohttp
-    #   yarl
-numpy==1.24.3
-    # via
-    #   pandas
-    #   pyarrow
-pandas==2.0.1
-    # via -r requirements.in
 publication==0.0.3
     # via
     #   aws-cdk-asset-awscli-v1
@@ -78,17 +39,8 @@ publication==0.0.3
     #   aws-cdk-lib
     #   constructs
     #   jsii
-pyarrow==12.0.0
-    # via -r requirements.in
 python-dateutil==2.8.2
-    # via
-    #   botocore
-    #   jsii
-    #   pandas
-pytz==2023.3
-    # via pandas
-s3fs==2023.5.0
-    # via -r requirements.in
+    # via jsii
 six==1.16.0
     # via python-dateutil
 typeguard==2.13.3
@@ -101,11 +53,3 @@ typeguard==2.13.3
     #   jsii
 typing-extensions==4.6.3
     # via jsii
-tzdata==2023.3
-    # via pandas
-urllib3==1.26.16
-    # via botocore
-wrapt==1.15.0
-    # via aiobotocore
-yarl==1.9.2
-    # via aiohttp
